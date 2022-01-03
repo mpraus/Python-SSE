@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+option java_package = "ex.grpc";
+option objc_class_prefix = "HSW";
+
+package python_sse;
+
+// The greeting service definition.
+service PythonService {
+  // Sends multiple greetings
+  rpc testPython (Request) returns (Reply) {}
+}
+
+// The request message containing the user's name and how many greetings
+// they want.
+message Request {
+  string message = 1;
+}
+
+// A response message containing a greeting
+message Reply {
+  string message = 1;
+}
