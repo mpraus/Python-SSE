@@ -21,3 +21,13 @@ message Request {
 message Reply {
   string message = 1;
 }
+
+/**
+ * A full description of the plugin, sent to the Qlik engine, listing all functions available and indicating whether script evaluation is allowed.
+ */
+message Capabilities {
+    bool allowScript = 1;                       /// When true, the Qlik engine allows scripts to be sent to the plugin.
+    repeated FunctionDefinition functions = 2;  /// The definitions of all available functions.
+    string pluginIdentifier = 3;                /// The ID or name of the plugin.
+    string pluginVersion = 4;                   /// The version of the plugin.
+}

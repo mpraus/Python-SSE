@@ -1,0 +1,13 @@
+{
+  "Functions" : [
+    {
+      "Id" : 0,
+      "Name" : "avg_of_rows",
+      "Type" : 1,
+      "ReturnType" : 1,
+      "Params" : {
+        "col1": 1
+      }
+    }
+  ]
+}
